@@ -11,7 +11,7 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 
 const Main: React.FC = () => {
     const [search, setSearch] = useState<any>('');
-    //custom hooks for speechRecongnition from react-speech-recognition library
+    //made custom hooks for speechRecongnition from react-speech-recognition library
     const {
         transcript,
         listening,
@@ -96,6 +96,7 @@ const Main: React.FC = () => {
                 <label htmlFor="imageInput">
                     <AiFillCamera className="text-3xl text-slate-400" />
                 </label>
+
                 <input
                     type="file"
                     id="imageInput"
@@ -103,6 +104,7 @@ const Main: React.FC = () => {
                     onChange={(e) => selectImage(e)}
                 />
             </form>
+
             <div className="flex mt-7">
                 <button 
                     className="bg-slate-100 mr-3 py-2 px-4 text-sm rounded hover:border"
@@ -114,5 +116,4 @@ const Main: React.FC = () => {
         </div>
     )
 }
-
 export default Main;
